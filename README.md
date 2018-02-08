@@ -43,6 +43,6 @@ script.run(1000) #  1000 defines the number of epoches for training.
 ```
 >>> python3 run.py 1000
 ```
-Note: you do have to resize the images of test directory manually or by using the scripy code seprately.
+Note: you do have to resize the images of test directory manually or by using the script code seprately.
 
 #### Note: This code is available for academic work only. For further uses permission is required from Mr. Ravin Kumar.

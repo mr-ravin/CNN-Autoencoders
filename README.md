@@ -1,4 +1,4 @@
-# Autoencoders :
+# CNN based Autoencoders :
 Implementation of CNN based autoencoders.
 
 ## Directory Structure :
@@ -30,7 +30,7 @@ Implementation of CNN based autoencoders.
 - Note: lets say at training time input image name is "abc.jpg", then please save it's desired output image by "abcr.jpg" in the input directory.
 
 ### Steps required :
-- We can import script.py file and than proceed:
+- We can import script.py file and than proceed :
 ```
 import script
 script.preprocess() # it will convert all input dir images to fixed size of 256 x 256.
@@ -45,4 +45,4 @@ script.run(1000) #  1000 defines the number of epoches for training.
 ```
 Note: you do have to resize the images of test directory manually or by using the scripy code seprately.
 
-### Note: This code is available for academic work only. For further uses permission is required from Mr. Ravin Kumar.
+#### Note: This code is available for academic work only. For further uses permission is required from Mr. Ravin Kumar.

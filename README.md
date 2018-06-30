@@ -45,4 +45,4 @@ script.run(1000) #  1000 defines the number of epoches for training.
 ```
 Note: you do have to resize the images of test directory manually or by using the script code seprately.
 
-#### Note: This code is available for academic work only. For further uses permission is required from Mr. Ravin Kumar.
+#### Note: This code is available to use for free after providing proper citation and deserved credits to this work. For other uses permission is required from Mr. Ravin Kumar.

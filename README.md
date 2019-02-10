@@ -48,7 +48,7 @@ Note: you do have to resize the images of test directory manually or by using th
 ### Working Project Videos
 A sample working demonstration of Autoencoders is available at [Youtube](https://www.youtube.com/watch?v=acfAf6eLbh8).
 
-[![Working Demonstration](https://github.com/mr-ravin/CNN-Autoencoders/flag-autoencoders.gif)](https://www.youtube.com/watch?v=acfAf6eLbh8)
+[![Working Demonstration](https://github.com/mr-ravin/CNN-Autoencoders/flag_autoencoders.gif)](https://www.youtube.com/watch?v=acfAf6eLbh8)
 
 
 #### Note: This code is available to use for free after providing proper citation and deserved credits to this work. For other uses permission is required from Mr. Ravin Kumar.

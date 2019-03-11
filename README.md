@@ -3,6 +3,8 @@ Implementation of CNN based autoencoders.
 
 #### Author: [Ravin Kumar](https://mr-ravin.github.io)
 
+##### Written in Tensorflow: 1.2
+
 ## Directory Structure :
 ```
 |

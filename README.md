@@ -54,5 +54,4 @@ A sample working demonstration of Autoencoders is available at [Youtube](https:/
 
 [![working demonstration](https://github.com/mr-ravin/CNN-Autoencoders/blob/master/flag_autoencoders.gif)](https://www.youtube.com/watch?v=acfAf6eLbh8)
 
-
-#### Note: This work can be used freely for academic research work and individual non-commercial projects, please do provide citation and/or deserved credits to this work. For Industrial and commercial use permission is required from the Author.
+##### Note: This work can be used freely after providing citation and/or deserved credits to this work. Please use it at your own risk !!!

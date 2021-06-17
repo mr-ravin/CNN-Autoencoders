@@ -47,7 +47,8 @@ script.run(1000) #  1000 defines the number of epoches for training.
 ```
 >>> python3 run.py 1000
 ```
-Note: you do have to resize the images of test directory manually or by using the script code seprately.
+
+Note: you do have to resize the images of test directory manually or by using the script code separately.
 
 ### Working Project Videos
 A sample working demonstration of Autoencoders is available at [Youtube](https://www.youtube.com/watch?v=acfAf6eLbh8).

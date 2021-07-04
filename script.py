@@ -62,44 +62,14 @@ def CNN_Autoencoders(data_volume, data_volume_fin, epochs=800, batch_size=5, dim
         enc_conv1 = tf.layers.max_pooling2d(enc_conv1, 2, 2)
         enc_conv2 = tf.layers.conv2d(enc_conv1, 16, 3, activation=tf.nn.relu)
         enc_conv2 = tf.layers.max_pooling2d(enc_conv2, 2, 2)
-        ###
-        #enc_conv3 = tf.layers.conv2d(enc_conv2,1,2,activation=tf.nn.relu)
         
-        """  
-        n_nodes_hl1=10
-        n_nodes_hl2=5
-        n_nodes_hl3=10
-        n_classes=int((dim_width/4)*(dim_height/4))
-        input_dims=int((dim_width/4)*(dim_height/4))
-        hidden_1_layer={'weights':tf.Variable(tf.random_normal([input_dims,n_nodes_hl1])),'biases':tf.Variable(tf.random_normal([n_nodes_hl1]))}
-        hidden_2_layer={'weights':tf.Variable(tf.random_normal([n_nodes_hl1 , n_nodes_hl2])),'biases':tf.Variable(tf.random_normal([n_nodes_hl2]))}  
-        hidden_3_layer={'weights':tf.Variable(tf.random_normal([n_nodes_hl2 , n_nodes_hl3])),'biases':tf.Variable(tf.random_normal([n_nodes_hl3]))}
-        output_layer={'weights':tf.Variable(tf.random_normal([n_nodes_hl3,n_classes])),'biases':tf.Variable(tf.random_normal([n_classes]))}
-  
-        ########## nw
-        l1=tf.add(tf.matmul(inputs_nn,hidden_1_layer['weights']),hidden_1_layer['biases'])
-        l1=tf.nn.relu(l1)
-
-        l2=tf.add(tf.matmul(l1,hidden_2_layer['weights']),hidden_2_layer['biases'])
-        l2=tf.nn.relu(l2)
-
-        l3=tf.add(tf.matmul(l2,hidden_3_layer['weights']),hidden_3_layer['biases'])
-        l3=tf.nn.relu(l3)
-
-        output=tf.add(tf.matmul(l3,output_layer['weights']),output_layer['biases'])
-        ########## nw        
-        entry_dec=tf.reshape(output,[dim_width/4,dim_height/4])
-        """
-        #enc_conv4 = tf.layers.conv2d(enc_conv3,1,2,activation=tf.nn.relu)
-        ###
         dec_conv2 = tf.image.resize_nearest_neighbor(enc_conv2, tf.constant([64, 64])) #q/4
         dec_conv2 = tf.layers.conv2d(dec_conv2, 32, 3, activation=tf.nn.relu)
         dec_conv1 = tf.image.resize_nearest_neighbor(dec_conv2, tf.constant([128, 128])) #q/2
         dec_conv1 = tf.layers.conv2d(dec_conv1, 64, 3, activation=tf.nn.relu)
         dec_conv0 = tf.image.resize_nearest_neighbor(dec_conv1, tf.constant([256, 256])) #q
         logits =    tf.layers.conv2d(dec_conv0, 3, (3, 3), padding='same', activation=None,name="logits")
-        #decoded =   tf.scalar_mul(tf.constant(255.0,tf.float32),decoded_1)
-        #decoded = logits
+        
         loss=tf.pow(targets_data - logits, 2)
         #####loss = tf.nn.sigmoid_cross_entropy_with_logits(labels=targets_data, logits=logits)
         cost = tf.reduce_mean(loss)
@@ -134,7 +104,6 @@ def CNN_Autoencoders(data_volume, data_volume_fin, epochs=800, batch_size=5, dim
             cv.imwrite('./testres/'+str(tmp2_file_name)+'r.jpg', ev)
         #return img
         #### Inference Code
-
 
 def run(epoch=2):
     data_volume, data_volume_fin = generate_numbers()
